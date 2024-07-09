@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "20890409328",
+    "project_id": "doctormobi-c8e3b",
+    "storage_bucket": "doctormobi-c8e3b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:20890409328:android:439b2f1e33f16ff1b2d7b5",
+        "android_client_info": {
+          "package_name": "com.example.doctormobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIpKACKbTJcPfS1e58EeS4IOZZipoEPdo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

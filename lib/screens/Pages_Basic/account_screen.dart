@@ -60,10 +60,8 @@ class _AccountScreenState extends State<AccountScreen> {
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
     final List name = [
-      'Shartnomalar',
-      'Xavfsizlik',
-      'Shaxsiy ma\'lumotlar',
-      'Mening kartalarim',
+      'Tarix',
+      'Boshliqlarni kiritish',
       'Yordam',
       'Qorong\'u rejim',
       'Chiqish',
@@ -71,8 +69,6 @@ class _AccountScreenState extends State<AccountScreen> {
     final List image = [
       'shartnoma.svg',
       'havfsizlik.svg',
-      'shaxsiy_malumotlar.svg',
-      'mening_kartalarim.svg',
       'yordam.svg',
       'tungi_rejim.svg',
       'logout.svg',
@@ -91,15 +87,16 @@ class _AccountScreenState extends State<AccountScreen> {
         width: double.infinity,
         child: Column(
           children: [
-            const AppbarTitle(),
-            const CircleAvatar(
-              backgroundColor: AppColors.lightBackgroundColor,
-              radius: 50, // Radius of the inner circle (avatar)
-              backgroundImage: AssetImage(
-                  'assets/images/avatar.png'), // Image for the avatar
+            SizedBox(
+              height: 20,
+            ),
+            Image.asset(
+              'assets/images/set.png',
+              width: 100,
+              height: 100,
             ),
             Text(
-              'Raximov Voris Avazbek o\'g\'li',
+              'Toshkent viloyati QB',
               style: AppStyle.fontStyle.copyWith(
                   fontWeight: FontWeight.bold,
                   color: themeProvider.isDarkTheme
@@ -109,57 +106,30 @@ class _AccountScreenState extends State<AccountScreen> {
             const SizedBox(
               height: 10,
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset(
-                  'assets/images/house.png',
-                  width: 60,
-                  height: 60,
-                ),
-                Column(
-                  children: [
-                    Text(
-                      'Mening uyim',
-                      style: AppStyle.fontStyle.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: themeProvider.isDarkTheme
-                              ? AppColors.darkTextColor
-                              : AppColors.lightTextColor),
-                    ),
-                    Row(
-                      children: [
-                        const Icon(
-                          Icons.arrow_upward,
-                          color: Colors.greenAccent,
-                        ),
-                        Text(
-                          '+230 154 so\'m',
-                          style: AppStyle.fontStyle.copyWith(
-                              fontWeight: FontWeight.bold,
-                              color: themeProvider.isDarkTheme
-                                  ? AppColors.darkTextColor
-                                  : AppColors.lightTextColor),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                // Image.asset(
+                //   'assets/images/house.png',
+                //   width: 60,
+                //   height: 60,
+                // ),
+
                 const SizedBox(
                   width: 20,
                   // height: 20,
                 ),
-                Image.asset(
-                  'assets/images/lock.png',
-                  width: 60,
-                  height: 60,
-                ),
-                Image.asset(
-                  'assets/images/emerency_on.png',
-                  width: 60,
-                  height: 60,
-                )
+                // Image.asset(
+                //   'assets/images/lock.png',
+                //   width: 60,
+                //   height: 60,
+                // ),
+                // Image.asset(
+                //   'assets/images/emerency_on.png',
+                //   width: 60,
+                //   height: 60,
+                // )
               ],
             ),
             const SizedBox(
@@ -172,11 +142,11 @@ class _AccountScreenState extends State<AccountScreen> {
                   itemCount: name.length,
                   itemBuilder: (context, index) {
                     return ListTile(
-                        leading: SvgPicture.asset(
-                          'assets/images/${image[index]}',
-                          width: 30,
-                          height: 30,
-                        ),
+                        // leading: SvgPicture.asset(
+                        //   'assets/images/${image[index]}',
+                        //   width: 30,
+                        //   height: 30,
+                        // ),
                         // title: item.buildTitle(context),
                         // subtitle: item.buildSubtitle(context),
                         title: Text(
